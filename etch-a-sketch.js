@@ -3,6 +3,7 @@ const popup = document.getElementById("popup");
 let number = 16;
 
 function etchASketch () {
+    container.style.setProperty('--number', number); // Set the CSS variable for the number of squares (ChatGPT)
     for (let i = 0; i < (number * number); i++) {
         const grid = document.createElement("div");
         grid.classList.add("grid");

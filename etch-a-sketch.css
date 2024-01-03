@@ -5,10 +5,6 @@ body {
 }
 
 #bod {
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: center; */
-    /* text-align: center; */
     width: 800px;
     height: 800px;
 }
@@ -22,12 +18,19 @@ body {
     flex-wrap: wrap;
     width: 800px;
     height: 800px;
-    flex: 1 1 50px;
 }
 
 .grid {
     box-sizing: border-box;
     border: 1px solid black;
-    height: 50px;
-    width: 50px;
+    flex: 1 1 calc(800px / var(--number)); /* Adjust the calculation for the size of squares (ChatGPT) */
+    max-width: calc(800px / var(--number)); /* Limiting the maximum width of squares (ChatGPT) */
+    max-height: calc(800px / var(--number)); /* Limiting the maximum width of squares (ChatGPT) */
+
+    /* ChatGPT said to use padding-bottom instead of max-height, but I thought max-height might work better?
+
+    /* padding-bottom: calc(100% / var(--number)); Set the padding based on the width to maintain squares  (ChatGPT) */ 
+    /* margin: 1px; Added a small margin between grid items for visibility  (ChatGPT) */
+    /* position: relative;  (ChatGPT) */
+    
 }
